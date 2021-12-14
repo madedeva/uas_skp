@@ -26,7 +26,7 @@ include "koneksi.php";
   <li><a href="logout.php">Logout</a></li>
 </ul>
 </div>
-<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda login menjadi <b><?php echo $_SESSION['level']; ?></b>.</p>
 <p>Daftar Akun Mahasiswa</p>
 
 <table class="tab" id="mahasiswa" border="1px">
