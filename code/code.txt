@@ -1,9 +1,35 @@
-body{
-	font-family: sans-serif;
-	background: #ebf9fb;
-}
+<div class="nav">
+<ul>
+  <li><a class="active" href="#home">Daftar Akun</a></li>
+  <li><a href="create.php">Tambah Akun</a></li>
+  <li><a href="#">Mahasiswa</a></li>
+  <li><a href="#">Admin</a></li>
+  <li><a href="logout.php">Logout</a></li>
+</ul>
+</div>
+
+
+<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+<p>Daftar Akun Mahasiswa</p>
+
+	<div class="kotak_login">
+		<p class="tulisan_login">Login e-SKP FTK</p>
  
-h1{
+		<form action="cek_login.php" method="post">
+			<label>Username</label>
+			<input type="text" name="username" class="form_login" placeholder="Username .." required="required">
+ 
+			<label>Password</label>
+			<input type="password" name="password" class="form_login" placeholder="Password .." required="required">
+ 
+			<input type="submit" class="tombol_login" value="LOGIN">
+ 
+			<br/>
+			<br/>
+		</form>
+	</div>
+
+  h1{
 	text-align: center;
 	font-weight: 300;
 }
@@ -42,20 +68,6 @@ label{
 	padding: 10px 20px;
 	cursor: pointer;
 }
- 
-.link{
-	color: #232323;
-	text-decoration: none;
-	font-size: 10pt;
-}
- 
-.alert{
-	background: #e44e4e;
-	color: white;
-	padding: 10px;
-	text-align: center;
-	border:1px solid #b32929;
-}
 
 ul {
     list-style-type: none;
@@ -82,23 +94,7 @@ ul {
   }
   
   .active {
-    background-color: #333;
-  }
-
-.tab {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 500px;
-}
-th {
-    background-color:grey;
-    color: white;
-}
-table {
-    border-collapse: collapse;
-}
+    
 
  /* table */
  #mahasiswa {
@@ -123,7 +119,15 @@ table {
 	color: white;
   }
 
-  .button1{
+  .tab {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 500px;
+}
+
+.button1{
 	  cursor: pointer;
 	  height: 25px;
 	  width: 75px;
@@ -145,3 +149,6 @@ table {
 	text-align: center;
 	border-radius: 4px;
 }
+
+menampilkan nama username
+<b><?php echo $_SESSION['level']; ?></b>
