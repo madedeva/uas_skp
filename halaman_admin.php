@@ -12,6 +12,11 @@ include "koneksi.php";
 	<style>
 		.cari{
 			width: 250px;
+			margin-left: 50px;
+		}
+		.data{
+			margin-left: 50px;
+			margin-right: 50px;
 		}
 	</style>
 
@@ -24,7 +29,7 @@ include "koneksi.php";
 	}
  
 	?>
-
+	
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">e-SKP FTK</a>
@@ -54,44 +59,16 @@ include "koneksi.php";
 	<form class="cari" action="" method="post">
       <input class="form-control me-2" type="search" name="keyword" id="s_keyword" placeholder="Search" aria-label="Search">
     </form>
+	<br>
 	<div class="data"></div>
 
-<br>
-<div class="data" id="container">
-<table class="table" border="1px">
-  <thead>
-    <tr>
-      <th scope="col">Nama</th>
-      <th scope="col">Username</th>
-      <th scope="col">Password</th>
-      <th scope="col">Level</th>
-	  <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php
-		$nomor = 0;
-		$data = mysqli_query($koneksi,"SELECT * FROM user WHERE level = 'user'");
-		while($show = mysqli_fetch_array($data)){
-			$nomor++;
-	?>
-    <tr>
-		<td><?php echo $show['nama'];?></td>
-		<td><?php echo $show['username'];?></td>
-		<td><?php echo $show['password'];?></td>
-		<td><?php echo $show['level'];?></td>
-		<td>
-			<a href="update.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-success">Edit</button></a>
-			<a href="delete.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-danger">Hapus</button></a>
-		</td>
-    </tr>
-	<?php } ?>
-  </tbody>
-</table>
-</div>
+	<!-- Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 	<script>
 		
@@ -123,13 +100,13 @@ include "koneksi.php";
 
 
 		}); */
-	$(document).ready(function(){
-	load_data();
-	function load_data(keyword)
+		$(document).ready(function(){
+		load_data();
+		function load_data(keyword)
 		{
 			$.ajax({
 				method:"POST",
-				url:"maasiswa.php",
+				url:"data.php",
 				data: {keyword:keyword},
 				success:function(hasil)
 				{

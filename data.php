@@ -1,11 +1,11 @@
-<table class="table" border="1px">
+<table class="table table-striped table-bordered" border="1px">
   <thead>
     <tr>
       <th scope="col">Nama</th>
       <th scope="col">Username</th>
       <th scope="col">Password</th>
       <th scope="col">Level</th>
-	  <th scope="col">Action</th>
+	  <th width="20%" scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +24,7 @@
 		<td>
 			<a href="update.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-success">Edit</button></a>
 			<a href="delete.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+            <a href="#"><button type="button" class="btn btn-primary">Input SKP</button></a>
 		</td>
     </tr>
 	<?php } ?>
