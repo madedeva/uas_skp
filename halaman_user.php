@@ -23,19 +23,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		<li class="nav-item">
+		<li class="nav-item" id="logout">
           <a class="nav-link" href="logout.php"><b>Logout</b></a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
 <div class="container">
-	<br>
-	<h1>Selamat Datang di Sistem e-SKP FTK</h1>
-	<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
-</div>
-<div class="container">
+<div class="jumbotron">
+  <h1 class="display-4">Selamat Datang di Sistem e-SKP FTK</h1>
+  <p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+  <hr class="my-4">
+  <div class="container">
   <h3>Info Mahasiswa</h3>
 </div>
 <div class="container">
@@ -53,7 +54,7 @@
       <input class="file-path validate" type="text" placeholder="Upload berkas">
     </div>
   </div>
-</form>
+</div>
 </div>
  </body>
 </html>
