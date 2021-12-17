@@ -30,7 +30,7 @@ include "koneksi.php";
  
 	?>
 	
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">e-SKP FTK</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +39,13 @@ include "koneksi.php";
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Daftar Akun</a>
+          <a class="nav-link active" aria-current="page" href="halaman_admin.php">Daftar Akun</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="create.php">Tambah Akun</a>
         </li>
 		<li class="nav-item">
-          <a class="nav-link" href="#">Mahasiswa</a>
+          <a class="nav-link" href="tambah_skp.php">Tambah SKP</a>
         </li>
 		<li class="nav-item">
           <a class="nav-link" href="logout.php"><b>Logout</b></a>
@@ -72,34 +72,6 @@ include "koneksi.php";
 
 	<script>
 		
-		/* var keyword = document.getElementById('keyword');
-		var tombolCari = document.getElementById('tombol-cari');
-		var container = document.getElementById('container');
-
-		/*tombolCari.addEventListener('click', function(){
-			alert('berhasil');
-		}); 
-
-		keyword.addEventListener('keyup', function(){
-			
-
-			/** object ajax 
-
-			var xhr = new XMLHttpRequest();
-
-			/**cek kesiapan ajax 
-			xhr.onreadystatechange = function(){
-				if(xhr.readyState == 4 && xhr.status == 200){
-					container.innerHTML = xhr.responseText;
-				}
-			}
-
-			xhr.open('GET', 'ajax/mahasiswa.php', true);
-			xhr.send();
-
-
-
-		}); */
 		$(document).ready(function(){
 		load_data();
 		function load_data(keyword)

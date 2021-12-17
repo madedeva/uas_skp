@@ -5,6 +5,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="#">e-SKP FTK</a>
@@ -30,34 +31,20 @@
   </div>
 </nav>
 
-<?php
-	include"koneksi.php";
-	$data = mysqli_query($koneksi, "SELECT * FROM user WHERE id='$_GET[id]'");
-    $datashow = mysqli_fetch_array($data);
-?>
-
 <div class="container">
-<form action="action_update.php" method="post">
+<form action="action_create.php" method="post">
 <div class="form-group">
-	<input type="hidden" name="id"  value="<?php echo $datashow['id']; ?>">
     <label for="exampleInputEmail1">Nama Mahasiswa</label>
-    <input type="text" class="form-control" name="nama" value="<?php echo $datashow['nama']; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama mahasiswa" required>
+    <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama mahasiswa" required>
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Username Mahasiswa</label>
-    <input type="text" class="form-control" name="username" value="<?php echo $datashow['username']; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan username mahasiswa" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="text" name="password" value="<?php echo $datashow['password']; ?>" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Level</label>
-    <input type="text" class="form-control" name="level" value="<?php echo $datashow['level']; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Level" required>
+    <label for="exampleInputEmail1">Tambah Poin SKP Mahasiswa</label>
+    <input type="number" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tambahkan poin" required>
   </div>
   <br>
-  <button type="submit" name="update" class="btn btn-primary">Simpan</button>
+  <button type="submit" name="simpan" class="btn btn-primary">Tambah</button>
 </form>
 </div>
+    
 </body>
 </html>

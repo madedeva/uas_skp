@@ -152,3 +152,57 @@ ul {
 
 menampilkan nama username
 <b><?php echo $_SESSION['level']; ?></b>
+
+	<script>
+		var keyword = document.getElementById('keyword');
+		var tombolCari = document.getElementById('tombol-cari');
+		var container = document.getElementById('container');
+
+		tombolCari.addEventListener('click', function(){
+			alert('berhasil');
+		}); 
+
+		keyword.addEventListener('keyup', function(){
+			
+
+			object ajax 
+
+			var xhr = new XMLHttpRequest();
+
+			cek kesiapan ajax 
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200){
+					container.innerHTML = xhr.responseText;
+				}
+			}
+
+			xhr.open('GET', 'ajax/mahasiswa.php', true);
+			xhr.send();
+
+
+
+		});
+
+		
+		$(document).ready(function(){
+		load_data();
+		function load_data(keyword)
+		{
+			$.ajax({
+				method:"POST",
+				url:"data.php",
+				data: {keyword:keyword},
+				success:function(hasil)
+				{
+					$('.data').html(hasil);
+				}
+			});
+	 	}
+		$('#s_keyword').keyup(function(){
+    		var keyword = $("#s_keyword").val();
+			load_data(keyword);
+		});
+	});
+
+
+	</script>
