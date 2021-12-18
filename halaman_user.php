@@ -43,10 +43,10 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Nama Mahasiswa</li>
     <li class="list-group-item">NIM</li>
-    <li class="list-group-item">Poin</li>
+    <li class="list-group-item">Poin Yang Diperloeh <h4>poin</h4><a href="#" class="btn btn-primary">Rincian</a></li>
   </ul>
 </div>
-
+<br>
 <div class="container">
   <h3>Tambahkan Portfolio</h3>
   <form action="action_berkas.php" method="post">

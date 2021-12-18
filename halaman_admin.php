@@ -46,6 +46,9 @@ include "koneksi.php";
         </li>
 		<li class="nav-item">
           <a class="nav-link" href="tambah_skp.php">Tambah SKP</a>
+		<li class="nav-item">
+          <a class="nav-link" id="logout" href="#">Berkas Masuk</a>
+        </li>
         </li>
 		<li class="nav-item">
           <a class="nav-link" id="logout" href="logout.php"><b>Logout</b></a>
