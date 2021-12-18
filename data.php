@@ -24,7 +24,7 @@
 		<td>
 			<a href="update.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-success">Edit</button></a>
 			<a href="delete.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-danger">Hapus</button></a>
-            <a href="#"><button type="button" class="btn btn-primary">Input SKP</button></a>
+            <a href="tambah_skp.php"><button type="button" class="btn btn-primary">Input SKP</button></a>
 		</td>
     </tr>
 	<?php } ?>
