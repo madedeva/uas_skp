@@ -36,25 +36,29 @@
   <h1 class="display-4">Selamat Datang di Sistem e-SKP FTK</h1>
   <p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
   <hr class="my-4">
-  <div class="container">
-  <h3>Info Mahasiswa</h3>
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Informasi Mahasiswa
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Nama Mahasiswa</li>
+    <li class="list-group-item">NIM</li>
+    <li class="list-group-item">Poin</li>
+  </ul>
 </div>
-<div class="container">
-  <h3>Perolehan SKP</h3>
-</div>
+
 <div class="container">
   <h3>Tambahkan Portfolio</h3>
-  <form class="md-form">
-  <div class="file-field">
-    <div class="btn btn-primary btn-sm float-left">
-      <span>Tambahkan Berkas</span>
-      <input type="file">
-    </div>
-    <div class="file-path-wrapper">
-      <input class="file-path validate" type="text" placeholder="Upload berkas">
-    </div>
+  <form action="action_berkas.php" method="post">
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Tambahkan Berkas Portfolio</label>
+    <input type="file" name="berkas" class="form-control-file" id="exampleFormControlFile1">
   </div>
-</div>
+  <div>
+  <input class="btn btn-primary" name="tambah" type="submit" value="Tambah">
+  </div>
+</form>
+
 </div>
  </body>
 </html>

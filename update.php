@@ -55,6 +55,10 @@
     <label for="exampleInputEmail1">Level</label>
     <input type="text" class="form-control" name="level" value="<?php echo $datashow['level']; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Level" required>
   </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Level</label>
+    <input type="number" class="form-control" name="poin" value="<?php echo $datashow['poin']; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Level" required>
+  </div>
   <br>
   <button type="submit" name="update" class="btn btn-primary">Simpan</button>
 </form>

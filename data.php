@@ -2,9 +2,10 @@
   <thead>
     <tr>
       <th scope="col">Nama</th>
-      <th scope="col">Username</th>
-      <th scope="col">Password</th>
+      <th scope="col">Nomor Induk Mahasiswa</th>
+      <th scope="col">Email</th>
       <th scope="col">Level</th>
+      <th scope="col">Total Poin</th>
 	  <th width="20%" scope="col">Action</th>
     </tr>
   </thead>
@@ -18,9 +19,10 @@
 	?>
     <tr>
 		<td><?php echo $show['nama'];?></td>
+    <td><?php echo $show['password'];?></td>
 		<td><?php echo $show['username'];?></td>
-		<td><?php echo $show['password'];?></td>
 		<td><?php echo $show['level'];?></td>
+    <td><?php echo $show['poin'];?></td>
 		<td>
 			<a href="update.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-success">Edit</button></a>
 			<a href="delete.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-danger">Hapus</button></a>
