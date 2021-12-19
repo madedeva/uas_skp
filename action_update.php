@@ -12,11 +12,10 @@ $poin = $_POST['poin'];
 $data = mysqli_query($koneksi, "UPDATE user SET nama='$nama', username='$username', password='$password', level='$level', poin='$poin' WHERE id='$id'");
  
 if ($data) {
-echo "Berhasil Update Data <br>";
-echo "<a href='halaman_admin.php'>Kembali</a>";
+    header("location:halaman_admin.php?pesan=berhasil");
+
 } else {
-echo "Gagal Input Data!!! <br>";
-echo "<a href='halaman_admin.php'>Kembali</a>";
+    header("location:halaman_admin.php?pesan=gagal");
 }
 }
 ?>

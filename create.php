@@ -65,19 +65,19 @@ if ($data) {
 <form action="create.php" method="post">
 <div class="form-group">
     <label for="exampleInputEmail1">Nama Mahasiswa</label>
-    <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama mahasiswa" required>
+    <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" required>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Username Mahasiswa</label>
-    <input type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan username mahasiswa" required>
+    <input type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" required>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="text" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+    <input type="text" name="password" class="form-control" id="exampleInputPassword1" required>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Level</label>
-    <input type="text" class="form-control" name="level" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Level" required>
+    <input type="text" class="form-control" name="level" id="exampleInputEmail1" aria-describedby="emailHelp" required>
   </div>
   <br>
   <button type="submit" name="simpan" class="btn btn-primary">Tambah</button>

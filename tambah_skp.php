@@ -38,11 +38,11 @@
 <form action="action_create.php" method="post">
 <div class="form-group">
     <label for="exampleInputEmail1">Nama Mahasiswa</label>
-    <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama mahasiswa" required>
+    <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp" required>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Tambah Poin SKP Mahasiswa</label>
-    <input type="number" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tambahkan poin" required>
+    <input type="number" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" required>
   </div>
   <br>
   <button type="submit" name="simpan" class="btn btn-primary">Tambah</button>
