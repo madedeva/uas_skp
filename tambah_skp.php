@@ -24,7 +24,7 @@
           <a class="nav-link" href="tambah_skp.php">Tambah SKP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="logout" href="#">Berkas Masuk</a>
+          <a class="nav-link" id="logout" href="berkas_masuk.php">Berkas Masuk</a>
         </li>
 		<li class="nav-item">
           <a class="nav-link" href="logout.php"><b>Logout</b></a>
@@ -33,7 +33,7 @@
     </div>
   </div>
 </nav>
-
+<br>
 <div class="container">
 <form action="action_create.php" method="post">
 <div class="form-group">

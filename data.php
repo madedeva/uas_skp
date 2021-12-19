@@ -6,7 +6,7 @@
       <th scope="col">Email</th>
       <th scope="col">Level</th>
       <th scope="col">Total Poin</th>
-	  <th width="20%" scope="col">Action</th>
+	    <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -25,8 +25,8 @@
     <td><?php echo $show['poin'];?></td>
 		<td>
 			<a href="update.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-success">Edit</button></a>
-			<a href="delete.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-danger">Hapus</button></a>
-            <a href="tambah_skp.php"><button type="button" class="btn btn-primary">Input SKP</button></a>
+			<a href="halaman_admin.php?id=<?php echo $show['id'];?>"><button type="button" class="btn btn-danger">Hapus</button></a>
+      <a href="tambah_skp.php"><button type="button" class="btn btn-primary">Input SKP</button></a>
 		</td>
     </tr>
 	<?php } ?>

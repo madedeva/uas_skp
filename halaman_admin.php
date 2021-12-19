@@ -6,19 +6,8 @@ include "koneksi.php";
     <head>
         <title>Admin</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-		
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+
     </head>
-	<style>
-		.cari{
-			width: 250px;
-			margin-left: 50px;
-		}
-		.data{
-			margin-left: 50px;
-			margin-right: 50px;
-		}
-	</style>
 
 <body>
 <?php 
@@ -31,7 +20,7 @@ include "koneksi.php";
 	?>
 	
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand" href="#">e-SKP FTK</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,7 +36,7 @@ include "koneksi.php";
 		<li class="nav-item">
           <a class="nav-link" href="tambah_skp.php">Tambah SKP</a>
 		<li class="nav-item">
-          <a class="nav-link" id="logout" href="#">Berkas Masuk</a>
+          <a class="nav-link" id="berkas" href="berkas_masuk.php">Berkas Masuk</a>
         </li>
         </li>
 		<li class="nav-item">
@@ -57,13 +46,40 @@ include "koneksi.php";
     </div>
   </div>
 </nav>
+<br>
+<?php 
+
+include "koneksi.php";
+ 
+if(isset($_GET['id'])){
+    if(empty($_GET['id'])){
+        echo "<b>Data yang dihapus tidak ada</b>";
+    }
+    else {
+        $delete = mysqli_query($koneksi,"DELETE FROM user WHERE id='$_GET[id]'") or die ("Mysql Error : ".mysqli_error($mysqli));
+        if($delete){
+			echo '
+			<div class="container">
+			  <div class="alert alert-success alert-dismissible fade show" role="alert">
+			  <strong>Data berhasil dihapus!</strong>
+			  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+			</div>';
+        }
+    }
+}
+?>
 
 <br>
+	<div class="container">
 	<form class="cari" action="" method="post">
       <input class="form-control me-2" type="search" name="keyword" id="s_keyword" placeholder="Search" aria-label="Search">
     </form>
+	</div>
 	<br>
+	<div class="container">
 	<div class="data"></div>
+	</div>
 
 	<!-- Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
@@ -97,6 +113,7 @@ include "koneksi.php";
 
 
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>

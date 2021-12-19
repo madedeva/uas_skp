@@ -30,6 +30,7 @@
     </div>
   </div>
 </nav>
+<br>
 
 <div class="container">
 <div class="jumbotron">
@@ -47,9 +48,37 @@
   </ul>
 </div>
 <br>
+
+<?php
+include"koneksi.php";
+ 
+if(isset($_POST['tambah'])){
+$berkas = $_POST['berkas'];
+ 
+$tambah = mysqli_query($koneksi, "INSERT INTO berkas SET berkas='$berkas'") or die ("berkas gagal disimpan! ".mysqli_error($koneksi));
+ 
+if ($tambah) {
+  echo '
+  <div class="container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Berhasil menambahkan berkas!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>';
+} else {
+  echo '
+  <div class="container">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Gagal menambahkan berkas!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>';
+    }
+}
+?>
 <div class="container">
   <h3>Tambahkan Portfolio</h3>
-  <form action="action_berkas.php" method="post">
+  <form action="halaman_user.php" method="post">
   <div class="form-group">
     <label for="exampleFormControlFile1">Tambahkan Berkas Portfolio</label>
     <input type="file" name="berkas" class="form-control-file" id="exampleFormControlFile1">
@@ -60,5 +89,6 @@
 </form>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
  </body>
 </html>
