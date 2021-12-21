@@ -20,7 +20,7 @@ if($cek > 0){
 	}else if($data['level']=="user"){
 		$_SESSION['username'] = $username;
 		$_SESSION['level'] = "user";
-		header("location:halaman_user.php");
+		header("location:halaman_user.php?=dashboard");
 
 	}else{
 

@@ -34,7 +34,7 @@
 
 <div class="container">
 <div class="jumbotron">
-  <h1 class="display-4">Selamat Datang di Sistem e-SKP FTK</h1>
+  <h3 class="display-4">Selamat Datang di Sistem e-SKP FTK</h3>
   <p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
   <hr class="my-4">
 <div class="card" style="width: 18rem;">
@@ -42,9 +42,9 @@
     Informasi Mahasiswa
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Nama Mahasiswa</li>
-    <li class="list-group-item">NIM</li>
-    <li class="list-group-item">Poin Yang Diperloeh <h4>poin</h4><a href="#" class="btn btn-primary">Rincian</a></li>
+    <li name="nama" class="list-group-item">Nama Mahasiswa</li>
+    <li name="password" class="list-group-item">NIM</li>
+    <li name="poin" class="list-group-item">Poin Yang Diperloeh <h4>poin</h4><a href="#" class="btn btn-primary">Rincian</a></li>
   </ul>
 </div>
 <br>
